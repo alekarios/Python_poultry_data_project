@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html len = "en">
+  <title> Data collector </title>
+  <head>
+    <link  href = "../static/main1.css" rel = "stylesheet">
+  </head>
+    <body>
+      <div class="topnav" id="myTopnav">
+        <a href="/success">farming</a>
+        <a href="/spendings">Spendings</a>
+        <a href="/farming_table">Farming Table</a>
+        <a href="/spendings_table">Spendings Table</a>
+        <a href="/total_spendings">Total Spendings Table</a>
+        <a href="/incomes">Total Incomes Table</a>
+        <a href="/charts">Charts</a>
+      </div>
+      <div class = "container">
+        <h1>Spendings Data</h1>
+        <form action = "{{url_for('spendings_table')}}" method = "POST">
+          <input placeholder="Enter screening" type="text" name="screen">
+          <button type="submit">submit</button>
+          {{text|safe}}
+        </form>
+      </div>
+    </body>
+
+
+
+
+</html>

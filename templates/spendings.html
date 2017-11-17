@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html len = "en">
+  <title> Data collector </title>
+  <head>
+    <link  href = "../static/main1.css" rel = "stylesheet">
+  </head>
+    <body>
+      <div class="topnav" id="myTopnav">
+        <a href="/success">farming</a>
+        <a href="/spendings">Spendings</a>
+        <a href="/farming_table">Farming Table</a>
+        <a href="/spendings_table">Spendings Table</a>
+        <a href="/total_spendings">Total Spendings Table</a>
+        <a href="/incomes">Total Incomes Table</a>
+        <a href="/charts">Charts</a>
+      </div>
+      <div class = "container">
+        <form action = "{{url_for('spendings')}}" method ="POST">
+          <style>
+          table{
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 50%;
+          }
+          td,th{
+            border: 1px solid #000000;
+            text-align: left;
+            padding: 8px;
+          }
+          tr:nth-child(even) {
+          background-color:#000000;
+        }
+          </style>
+
+          <p><font color = "red">SPENDINGS</font></p>
+
+          <table>
+        <tr>
+          <th>Διαλογή</th>
+          <th><input  placeholder="Enter screening" type="text" name="screen" required></th>
+        </tr>
+        <tr>
+          <th>Υγραεριο</th>
+          <th><input  placeholder="Enter spendings" type="number" name="gas"></th>
+        </tr>
+        <tr>
+          <th>Αχυρα</th>
+          <th><input placeholder="Enter spendings" type="number" name="straw"></th>
+        </tr>
+        <tr>
+          <th>Εργατικα</th>
+          <th><input placeholder="Enter spendings " type="number" name="working"></th>
+        </tr>
+        <tr>
+          <th>Λογιστικά</th>
+          <th><input placeholder="Enter spendings " type="number" name="logistics"></th>
+        </tr>
+        <tr>
+          <th>Καθαρισμός</th>
+          <th><input placeholder="Enter spendings " type="number" name="cleaning"></th>
+        </tr>
+        <tr>
+          <th>Απολυμαντικα</th>
+          <th><input placeholder="Enter spendings " type="number" name="disinfectant"></th>
+        </tr>
+        <tr>
+          <th>Εμβόλια</th>
+          <th><input placeholder="Enter spendings " type="number" name="injection"></th>
+        </tr>
+        <tr>
+          <th>Φάρμακα</th>
+          <th><input placeholder="Enter spendings " type="number" name="medicine"></th>
+        </tr>
+        <tr>
+          <th>Διατροφικα</th>
+          <th><input placeholder="Enter spendings " type="number" name="alimony"></th>
+        </tr>
+        <tr>
+          <th>Πετρέλαιο</th>
+          <th><input placeholder="Enter spendings " type="number" name="oil"></th>
+        </tr>
+        <tr>
+          <th>Φύρα</th>
+          <th><input placeholder="Enter spendings " type="number" name="waste"></th>
+        </tr>
+      </table>
+
+      <button type="submit">sumbit</button>
+
+        </form>
+      </div>
+    </body>
+
+
+
+
+</html>

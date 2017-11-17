@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html len = "en">
+  <title> CHARTS </title>
+  <head>
+    <link  href = "../static/main1.css" rel = "stylesheet">
+    <link rel="stylesheet" href={{cdn_css | safe}} type="text/css" />
+    <script type="text/javascript" src={{cdn_js | safe}}></script>
+  </head>
+    <body>
+      <div class="topnav" id="myTopnav">
+        <a href="/success">farming</a>
+        <a href="/spendings">Spendings</a>
+        <a href="/farming_table">Farming Table</a>
+        <a href="/spendings_table">Spendings Table</a>
+        <a href="/total_spendings">Total Spendings Table</a>
+        <a href="/incomes">Total Incomes Table</a>
+        <a href="/charts">Charts</a>
+      </div>
+      <div class = "container">
+        <h1>Chart</h1>
+        <form action = "{{url_for('plot')}}" method = "POST">
+          <input placeholder="Enter screening" type="text" name="screen" required>
+          <input placeholder="Enter cartel" type="text" name="cartel" required>
+          <button type="submit">submit</button>
+          {{script1 | safe}}
+          {{div1 | safe}}
+
+        </form>
+      </div>
+    </body>

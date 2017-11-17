@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html len = "en">
+  <title> Data collector </title>
+  <head>
+    <link  href = "../static/main1.css" rel = "stylesheet">
+  </head>
+    <body>
+
+      <div class="topnav" id="myTopnav">
+        <a href="/success">farming</a>
+        <a href="/spendings">Spendings</a>
+        <a href="/farming_table">Farming Table</a>
+        <a href="/spendings_table">Spendings Table</a>
+        <a href="/total_spendings">Total Spendings Table</a>
+        <a href="/incomes">Total Incomes Table</a>
+        <a href="/charts">Charts</a>
+      </div>
+
+      <div class = "container">
+        <form action = "{{url_for('success1')}}" method = "POST" autocomplete="off">
+
+<!--First table-->
+          <style>
+          table{
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 50%;
+          }
+          td,th{
+            border: 1px solid #000000;
+            text-align: left;
+            padding: 8px;
+          }
+          tr:nth-child(even) {
+          background-color:#000000;
+        }
+          </style>
+          <table>
+            <tr>
+              <th>Διαλογή</th>
+              <th><input title="Screening" placeholder="Enter screening" type="text" name="screen" required></th>
+            </tr>
+            <tr>
+              <th>Καρτέλα Εκτροφής</th>
+              <th><input title="Poultry farming cartel" placeholder="Enter poultry farming cartel" type="text" name="cartel" required></th>
+            </tr>
+            <tr>
+              <th>ΑΠΩΛΕΙΕΣ</th>
+              <th><input title ="Quantity of losses" placeholder="Enter quantity" type="number" name = "looses"></th>
+            </tr>
+            <tr>
+              <th>Πραγματικό MZB(gr)</th>
+              <th><input title="Real MZB(gr)" placeholder="Enter real MZB(gr)" type="number" name="real">
+            </tr>
+            <tr>
+              <th>Φύραμα</th>
+              <th><input title="paste" placeholder="Enter paste" type="number" name="paste">
+            </tr>
+            <tr>
+              <th>Ζωντανό βάρος</th>
+              <th><input title="weight" placeholder="Enter weight" type="number" name="weight">
+            </tr>
+            <tr>
+              <th>Αριθμός πουλιών</th>
+              <th><input title="Poultry" placeholder="Enter quantity of poultry" type="number" name="poultry"></th>
+            </tr>
+            <tr>
+              <th>Επιφάνεια(m2)</th>
+              <th><input title="Patch" placeholder="Enter patch" type="number" name="patch"></th>
+            </tr>
+          </table>
+          <button type="submit">sumbit</button>
+          {{text|safe}}
+        </form>
+
+      </div>
+
+
+
+    </body>
